@@ -57,6 +57,7 @@ var res = function(done) {
 
     return {
         send : function() {done();},
+        debug : function() {done();},
         error : function(err) {done(err);}
     };
 };
