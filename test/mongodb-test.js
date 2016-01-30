@@ -57,7 +57,6 @@ var res = function(done) {
 
     return {
         send : function() {done();},
-        debug : function() {done();},
         error : function(err) {done(err);}
     };
 };
@@ -72,6 +71,7 @@ describe('mongodb', function() {
                 getConfig:function(){return null;},
                 log : {
                     info : function(log) { console.log(log)},
+                    debug : function(log) { console.log(log)},
                     error : function(log) { console.log(log)}
                 },
                 getService : function(name) {
